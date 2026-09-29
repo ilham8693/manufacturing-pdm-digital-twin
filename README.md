@@ -4,10 +4,21 @@
 [![Streamlit](https://img.shields.io/badge/Streamlit-1.20+-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io/)
 [![XGBoost](https://img.shields.io/badge/XGBoost-Prognostics-EB5424?logo=xgboost&logoColor=white)](https://xgboost.readthedocs.io/)
 [![Scikit-Learn](https://img.shields.io/badge/scikit--learn-ML%20Classification-F7931E?logo=scikit-learn&logoColor=white)](https://scikit-learn.org/)
+[![Dataset: Kaggle](https://img.shields.io/badge/Dataset-Kaggle.com-20BEFF?logo=kaggle&logoColor=white)](https://www.kaggle.com/)
 [![ISO Standard](https://img.shields.io/badge/Standard-ISO%2010816--3-10b981)](https://www.iso.org/standard/29080.html)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 An industrial-grade **Asset Digital Twin & Predictive Maintenance (PdM)** platform designed for CNC, Lathe, and Milling machinery. This project bridges **First-Principles Process Engineering** (Rotodynamics, ISO 10816-3 vibration severity, thermodynamics, and tribology) with **Modern Machine Learning** (XGBoost RUL prognostics and multi-class fault classification).
+
+---
+
+## 📊 Dataset Provenance & Attribution
+
+The telemetry underlying this project originates from the industrial manufacturing dataset hosted on **[Kaggle.com](https://www.kaggle.com/)**.
+* **Dataset Scope:** 1,578,241 continuous operational records sampled at 1-minute resolution across 3 operational years (2022–2025).
+* **Equipment Monitored:** 4 Industrial Machines (`M001`–`M004`) across 3 Machine Types (`CNC`, `Lathe`, `Milling`) and 3 Production Lines (`L1`–`L3`).
+* **Sensor Channels:** 91 synchronous telemetry variables spanning Rotodynamics (triaxial vibration, acoustic, ultrasonic), Thermodynamics (bearing, motor, oil, coolant temperatures), Fluid Power (pressures, flows), 3-Phase Electrical Quality (voltage, current, power factor), and Ground Truth Failure Events.
+* **Repository Sample:** For immediate out-of-the-box execution without downloading gigabytes of raw data, this repository includes an optimized, balanced 35,000-row sample in `data/telemetry_sample.parquet` (14.4 MB).
 
 ---
 
@@ -99,6 +110,8 @@ siemens-pdm-digital-twin/
 ├── requirements.txt            # Python dependencies
 ├── LICENSE                     # MIT License
 ├── .gitignore                  # Git ignore rules
+├── .streamlit/
+│   └── config.toml             # Streamlit high-contrast UI theme configuration
 ├── .github/
 │   └── workflows/
 │       └── ci.yml              # Automated GitHub Actions CI workflow
